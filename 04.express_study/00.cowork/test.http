@@ -1,0 +1,53 @@
+GET http://localhost:3000/api/members
+
+###
+POST http://localhost:3000/api/members
+Content-Type: application/json
+
+{
+    "id": 13,
+    "name": "Peniel",
+    "team": "sales",
+    "position": "Sales Staff",
+    "emailAddress": "peniel@google.com",
+    "phoneNumber": "010-xxxx-xxxx",
+    "admissionDate": "2021/06/12",
+    "birthday": "1995/09/27",
+    "profileImage": "profile13.png"
+}
+
+# {
+#     "id": 11,
+#     "name": "Zake",
+#     "team": "engineering",
+#     "position": "Android Developer",
+#     "emailAddress": "zake@google.com",
+#     "phoneNumber": "010-xxxx-xxxx",
+#     "admissionDate": "2021/06/12",
+#     "birthday": "1995/09/27",
+#     "profileImage": "profile11.png"
+# }
+
+###
+GET http://localhost:3000/api/members?team=engineering
+
+###
+GET http://localhost:3000/api/members?team=sales
+
+###
+GET http://localhost:3000/api/members?team=marketing
+
+###
+GET http://localhost:3000/api/members/14
+
+###
+PUT http://localhost:3000/api/members/80
+Content-Type: application/json
+
+{
+    "name": "Rico",
+    "emailAddress": "rico@google.com"
+}
+
+###
+DELETE http://localhost:3000/api/members/15
